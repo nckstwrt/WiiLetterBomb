@@ -46,6 +46,7 @@ namespace WiiLetterBomb
 
         private void buttonWrite_Click(object sender, EventArgs e)
         {
+            bool ret = false;
             try
             {
                 var driveLetterRootDir = comboBoxDriveLetters.SelectedItem.ToString();
@@ -73,12 +74,16 @@ namespace WiiLetterBomb
                 if (radioButtonKorea.Checked)
                     region = LetterBombExploit.Region.Korea;
 
-                LetterBombExploit.SignTemplate(region, textBoxMACAddress.Text, driveLetterRootDir);
+                LetterBombExploit.SignTemplate(region, textBoxMACAddress.Text.ToUpper(), driveLetterRootDir, dateTimePickerExploit.Value);
+                ret = true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Exception Thrown!\r\n\r\n" + ex.Message, "Exception Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            if (ret)
+                MessageBox.Show("Success!\r\n\r\nExploit written to drive.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)

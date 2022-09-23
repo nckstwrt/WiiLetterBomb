@@ -14,7 +14,7 @@ namespace WiiLetterBomb
         static void Main()
         {
             //ParentalCodeCalc.GetCode(new DateTime(2022, 9, 1), "44556677");
-            //LetterBombExploit.SignTemplate(LetterBombExploit.Region.Europe, "010203040506", "c:\\");
+            //LetterBombExploit.SignTemplate(LetterBombExploit.Region.Europe, "e00c7fd74d75", "E:\\", DateTime.UtcNow.AddDays(-1));
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
