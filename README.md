@@ -9,6 +9,10 @@ It also includes a C# built version of the Wii Parental Control password reset t
 
 All credit goes to the makers of these great tools - I simply built this in about 20 minutes out of curiosity of how the exploit delivery works.
 
+## Screenshot
+
+![](https://i.imgur.com/k1b66HR.png)
+
 ### License
 
 GPL-2.0
