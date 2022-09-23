@@ -49,6 +49,12 @@ namespace WiiLetterBomb
             bool ret = false;
             try
             {
+                if (!radioButtonUS.Checked && !radioButtonEurope.Checked && !radioButtonJapan.Checked && !radioButtonKorea.Checked)
+                {
+                    MessageBox.Show("Please select the correct region for your Wii!", "Region Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 var driveLetterRootDir = comboBoxDriveLetters.SelectedItem.ToString();
 
                 if (Directory.Exists(Path.Combine(driveLetterRootDir, "private")))
